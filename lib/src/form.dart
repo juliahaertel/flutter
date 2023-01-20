@@ -9,9 +9,12 @@ class FormPage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Formulario')
+        title: const Text('Formulário')
       ),
-      body: const FormularioPage(),
+      body: Container(
+        padding:const EdgeInsets.all(10),
+        child: const FormularioPage(),
+      )
     );
   }
   
