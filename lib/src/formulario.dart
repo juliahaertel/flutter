@@ -28,6 +28,18 @@ class FormularioPage extends StatefulWidget{
               }
             },
           ),
+          TextFormField(
+            decoration: const InputDecoration(
+              hintText: 'Digite seu email:'
+            ),
+            validator: (value){
+              if(value!.isEmpty){
+                return 'Informe o email!';
+              }else{
+                null;
+              }
+            },
+          ),
           ElevatedButton(
             child: const Text('Enviar'),
             onPressed: (){
