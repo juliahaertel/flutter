@@ -4,7 +4,7 @@ Projeto em Flutter :)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Projeto criado para o estudo do framework Flutter e comandos do git.
 
 A few resources to get you started if this is your first Flutter project:
 
