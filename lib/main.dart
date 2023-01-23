@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'src/foto.dart';
 import 'package:flutter_project/src/models/pegaNome.dart';
 import 'src/setStateAplicativ.dart';
 import 'package:provider/provider.dart';
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
         '/setStateLocalPage': (context) => const SetStateLocalPage(),
         '/setStateAplicativPage': (context) => const SetStateAplicativPage(),
         '/consultaPage': (context) => const ConsultaPage(),
-        '/formPage': (context) =>const FormPage()
+        '/formPage': (context) =>const FormPage(),
+        '/fotoPage': (context) => const FotoPage()
       },
       initialRoute: '/home',
     );
