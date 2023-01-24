@@ -14,29 +14,27 @@ class SetStateAplicativPage extends StatelessWidget{
       appBar: AppBar(
         title: const Text('Set State Page')
       ),
-      body: Container(
-        child: Column(
-          children: [
-            const Text('Contagem:'),
-            Consumer<Contador>(
-              builder: (context, contador, child) => Text(
-                contador.valor.toString()
-              )
-            ),
-            ElevatedButton(
-              child: const Text('Aumentar'),
-              onPressed: (){
-                  Provider.of<Contador>(context, listen: false).aumentar();
-              }
-            ),
-            ElevatedButton(
-              child: const Text('ver'),
-              onPressed: (){
-                  Navigator.pushNamed(context, '/consultaPage');
-              }
+      body: Column(
+        children: [
+          const Text('Contagem:'),
+          Consumer<Contador>(
+            builder: (context, contador, child) => Text(
+              contador.valor.toString()
             )
-          ],
-        ),
+          ),
+          ElevatedButton(
+            child: const Text('Aumentar'),
+            onPressed: (){
+                Provider.of<Contador>(context, listen: false).aumentar();
+            }
+          ),
+          ElevatedButton(
+            child: const Text('ver'),
+            onPressed: (){
+                Navigator.pushNamed(context, '/consultaPage');
+            }
+          )
+        ],
       )
     );
   }

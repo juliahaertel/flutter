@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FormularioPage extends StatefulWidget{
@@ -80,7 +80,7 @@ class FormularioPage extends StatefulWidget{
             onPressed: (){
               if(_formkey.currentState!.validate()){
                 _formkey.currentState!.save();
-                print("validadooow");
+                //print("validadooow");
               }
             },
           ),
@@ -88,14 +88,11 @@ class FormularioPage extends StatefulWidget{
           Container(
             //color: Colors.lightBlue,
             height: 70,
+            padding: const EdgeInsets.all(20),
             //width: 100000,
             child: Row(
               children: [
-                Expanded(child: ElevatedButton(
-                  onPressed: (){}, 
-                  child: Text('Usuario registrado: \nNome $nome e Email $email'),
-                  )
-                )
+                Text('Usuario registrado: \nNome $nome e Email $email'),
               ],
             )
           )

@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget{
           const Padding(padding: EdgeInsets.only(top: 50.0)),
           Row(
           children: [
-            const Icon(Icons.android),  
+            const Icon(Icons.bar_chart),  
             Expanded(              
               child: OutlinedButton(
               child: const Text('Ir para tela dinamica'),
@@ -68,10 +68,10 @@ class HomePage extends StatelessWidget{
         ),
         Row(
           children: [
-            const Icon(Icons.bar_chart , color: Colors.black),
+            const Icon(Icons.text_snippet_sharp, color: Colors.black),
             Expanded(
               child: OutlinedButton(
-              child: const Text('Ir para tela'),
+              child: const Text('Ir para tela || testando...'),
               onPressed: (){
               Navigator.pushNamed(context, '/setStateAplicativPage');
               },
@@ -94,12 +94,12 @@ class HomePage extends StatelessWidget{
         ),
          Row(
           children: [
-            const Icon(Icons.picture_in_picture_sharp, color: Colors.black),
+            const Icon(Icons.image_sharp, color: Colors.black),
             Expanded(
               child: OutlinedButton(
-                child: const Text('Ir para a página de foto'),
+                child: const Text('Ir para a página de imagem'),
                 onPressed: (){
-                  Navigator.pushNamed(context, '/fotoPage');
+                  Navigator.pushNamed(context, '/imagePage');
                 }
               )
             )
