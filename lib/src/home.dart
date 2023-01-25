@@ -104,7 +104,20 @@ class HomePage extends StatelessWidget{
               )
             )
           ],
-        )
+        ),
+        Row(
+          children: [
+            const Icon(Icons.data_usage_rounded, color: Colors.black),
+            Expanded(
+              child: OutlinedButton(
+                child: const Text('Ir para a lista de usuarios'),
+                onPressed: (){
+                  Navigator.pushNamed(context, '/userList');
+                }
+              )
+            )
+          ],
+        ),
         ]
       )
     );
