@@ -25,4 +25,6 @@ const DUMMY_USERS = {
     email: 'jiovane@gmail.com', 
     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb75aLAsHQuVvgofGiZw0yCiEDZz_LRBNmPw&usqp=CAU'
     ),
+    //menina:
+    //https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQucfRAnaa3tJZ4uui1X3MF6-DqHaqli_-Ew&usqp=CAU
 };

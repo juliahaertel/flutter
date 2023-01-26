@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:email_validator/email_validator.dart';
 
 
-class FormularioPage extends StatefulWidget{
+class FormularioPage extends StatefulWidget{  
   const FormularioPage({Key? key}) : super(key: key);
 
 
@@ -20,7 +20,7 @@ class FormularioPage extends StatefulWidget{
     /*String email = '';
     String nome  = '';
     String senha = '';*/
-
+    
     void _loadFormData(User? user){
       if(user != null){
       _formData['id'] = user.id!;
@@ -37,6 +37,8 @@ class FormularioPage extends StatefulWidget{
     _loadFormData(user);
     //print(user?.name);
     
+
+
     return Form(
       key: _formkey,
       child:Column(
@@ -86,16 +88,16 @@ class FormularioPage extends StatefulWidget{
             },*/
             onSaved: (value) => _formData['email'] = value!,
           ),
-
-          const Padding(padding: EdgeInsets.all(25.0)),
+          const Padding(padding: EdgeInsets.only(top: 25.0)),
           TextFormField(
             initialValue: _formData['avatarUrl'],
             decoration: const InputDecoration(
-              hintText: 'Url do Avatar:'
+              hintText: 'Url avatar:'
             ),
             onSaved: (value) => _formData['avatarUrl'] = value!,
           ),
-
+          
+      
           //senha
           /*
           const Padding(padding: EdgeInsets.only(top: 25.0)),
