@@ -48,7 +48,7 @@ class ImagemPage extends StatelessWidget{
                         icon: Icons.call,
                         text: 'Ligar',
                         onPress:(){
-                          print('1');
+                        //  print('1');
                         })
                       ),
                       Expanded(
@@ -56,7 +56,7 @@ class ImagemPage extends StatelessWidget{
                           icon: Icons.link,
                           text: 'Link',
                           onPress:(){
-                            print('2');
+                          //  print('2');
                           }
                         )
                       ),
@@ -65,7 +65,7 @@ class ImagemPage extends StatelessWidget{
                           icon: Icons.add_alert_outlined,
                           text: 'Notificação',
                           onPress:(){
-                            print('3');
+                          //  print('3');
                           }
                         )
                       )
@@ -88,11 +88,11 @@ class ImagemPage extends StatelessWidget{
 class Botao extends StatelessWidget{
  // const Botao({Key? key, IconData? icon, required String text, Null Function() onPress}) : super(key: key);
 
-  const Botao({
+  const Botao({Key? key, 
     this.onPress,
     required this.icon,
     required this.text
-  });
+  }) : super(key: key);
 
  final Function()? onPress;
  final IconData icon;

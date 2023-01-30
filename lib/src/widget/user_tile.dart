@@ -8,10 +8,11 @@ class UserTile extends StatelessWidget {
 
   final User user;
 
-  const UserTile(this.user);
+  const UserTile(this.user, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unnecessary_null_comparison
     final avatar = user.avatarUrl == null || user.avatarUrl.isEmpty
       ?const CircleAvatar(child: Icon(Icons.person))
       :CircleAvatar(backgroundImage: NetworkImage(user.avatarUrl));
@@ -19,7 +20,7 @@ class UserTile extends StatelessWidget {
       leading: avatar,
       title: Text(user.name),
       subtitle: Text(user.email),
-      trailing: Container(
+      trailing: SizedBox(
         width: 100,
         child: Row(
         children: [

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/src/models/user.dart';
 import 'package:flutter_project/src/provider/users.dart';
-import 'package:flutter_project/src/widget/userTile.dart';
+import 'package:flutter_project/src/widget/user_tile.dart';
 import 'package:provider/provider.dart';
 
 class UserList extends StatelessWidget {
+  const UserList({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
