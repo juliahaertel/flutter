@@ -22,20 +22,25 @@ class Post{
   }
 }
 
-Future<Post> pegarPost() async{
-  final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'));
+Future<List<Post>> pegarPosts() async{
+  final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
 
   if(response.statusCode == 200){
-      return Post.fromJson(json.decode(response.body));
+      return parsePosts(response.body);
   }else{
     throw Exception('Falhou a requisição Post');
   }
 }
 
+  List<Post> parsePosts(String responseBody){
+  var parsed = jsonDecode(responseBody).cast<Map<String, dynamic>>();
+  return parsed.map<Post>((json) => Post.fromJson(json)).toList();
+  }
 
 class RequisPage extends StatefulWidget{
   const RequisPage({Key? key}) : super(key: key);
 
+  Future<List<Post>> postagens;
 
   @override
   _RequisPage createState() => _RequisPage();
