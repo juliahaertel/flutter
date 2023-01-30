@@ -21,6 +21,7 @@ class Users with ChangeNotifier{
  
   void put(User user) {
     
+    // ignore: unnecessary_null_comparison
     if(user == null){
       return;
     }
@@ -48,6 +49,7 @@ class Users with ChangeNotifier{
   }
 
   void remove(User user){
+    // ignore: unnecessary_null_comparison
     if(user!= null && user.id != null){
       _items.remove(user.id);
       notifyListeners();

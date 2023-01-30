@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'models/pegaNome.dart';
+import 'models/pega_nome.dart';
 
 class ScreenArguments{
   final String message;

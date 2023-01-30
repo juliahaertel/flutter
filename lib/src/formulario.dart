@@ -83,9 +83,9 @@ class FormularioPage extends StatefulWidget{
             },
             /*onSaved: (txt){
               setState(() {
-              //  email = txt!;
-              });
-            },*/
+                email = txt!;
+              });},*/
+              
             onSaved: (value) => _formData['email'] = value!,
           ),
           const Padding(padding: EdgeInsets.only(top: 25.0)),
@@ -132,7 +132,8 @@ class FormularioPage extends StatefulWidget{
                   avatarUrl: _formData['avatarUrl']!,
                   ),
                   );
-                Navigator.pushNamed(context, '/userList');
+                //Navigator.pushNamed(context, '/userList'); //ou  Navigator.pop()
+                Navigator.popAndPushNamed(context, '/userList');
               }
             },
           ),
